@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+ <link type="text/css" href="/css/user.css" rel="stylesheet" />
+    <div>
+        <h2>修改密码</h2>
+        </div>
+    <div class="usermod">
+    <form method="post" action="/user_mod_result/">
+     <div>
+
+     <label>用&nbsp户</label>
+    <input  type="text" name="oldusername" required="required" />
+     <br/>
+      <label>旧密码</label>
+    <input type="password" name="oldpassword" required="required"/>
+       <br/>
+    <label>新密码</label>
+    <input type="password" name="newpassword" required="required"/>
+    <br />
+    &nbsp;&nbsp;&nbsp;<input type="submit"> &nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" />
+    </div>
+
+    </form>
+     </div>
+
+{% endblock %}

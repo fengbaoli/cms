@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<link type="text/css" href="/css/user.css" rel="stylesheet" />
+    <div>
+	<h2>用户注册</h2>
+	</div>
+
+    <div class="useradd">
+       <form method="post" action="/user_result/">
+        <div class="useraddinput">
+          <label>用&nbsp;&nbsp户:</label>
+          <input  type="text" name="addusername" required="required" />
+          <br />
+          <label>输入密码</label>
+          <input type="password" name="addpassword1" required="required"/>
+          <br />
+          <label>确认密码</label>
+          <input type="password" name="addpassword2" required="required"/>
+             <br />
+	      <label>联系号码</label>
+          <input type="text" name="telephone" required="required"/>
+          <br />
+          <input type="submit" value="确定" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+	  <input type="reset"  value="重置" />
+        </div>
+
+      </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>首页</title>
+<meta charset="utf-8" />
+<link href="/css/index.css" type="text/css" rel="stylesheet" />
+</head>
+<body>  
+                <div id="logo" >
+            <img src="/images/logo.jpg" />
+            </div>
+         <div id="logout">
+         欢迎:{{username}}&nbsp;&nbsp <a  href="/logout" />退出</a>
+         </div>
+         <div class="nav">
+                <ul id="nav">
+                  <li class="navTop"><a href="/index/">首页</a></li>
+                  
+                  <li class="navTop"><a href="">日常事务</a>
+            <ul>
+                    <li><a href="http://www.17sucai.com/">前台销售</a></li>
+                    <li><a href="/tests">采购进货</a></li>
+                    <li><a href="/goods_management">商品管理</a></li>
+                    <li><a href="http://www.17sucai.com/">vip会员管理</a></li>
+                    <li><a href="http://www.17sucai.com/">库存调整</a></li>
+                    <li><a href="http://www.17sucai.com/">库存盘点</a></li>
+                    <li><a href="http://www.17sucai.com/">钱箱出入款</a></li>
+            </ul>
+                  </li>
+                  <li class="navTop"><a href="">查询</a>
+                    <ul>
+                                <li><a href="http://www.17sucai.com/">当前库存明细</a></li>
+                                <li><a href="http://www.17sucai.com/">历史销售明细</a></li>
+                                <li><a href="http://www.17sucai.com/">库存调整明细</a></li>
+                                <li><a href="http://www.17sucai.com/">采购进货明细</a></li>
+            </ul>
+                  </li>
+                   <li class="navTop"><a href="">统计分析</a>
+                        <ul>
+                                <li><a href="http://www.17sucai.com/">销售统计分析</a></li>
+                                <li><a href="http://www.17sucai.com/">进货统计分析</a></li>
+                                <li><a href="http://www.17sucai.com/">库存统计分析</a></li>
+                                <li><a href="http://www.17sucai.com/">经营利润分析</a></li>
+                                <li><a href="http://www.17sucai.com/">进销统计分析</a></li>
+                        </ul>
+                  </li>
+                  <li class="navTop"><a href="">信息维护</a>
+                    <ul>
+                                <li><a href="/brand_management">品牌管理</a></li>
+                                <li><a href="/category_management">类别管理</a></li>
+                                <li><a href="/seasonal_management">季节管理</a></li>
+                                <li><a href="/color_management">颜色管理</a></li>
+                                <li><a href="/size_management">尺码管理</a></li>
+                                <li><a href="/customer_manager">供应商管理</a></li>
+                                <li><a href="/unit_management">单位管理</a></li>
+                                <li><a href="/vip_management">vip类别管理</a></li>
+            </ul>
+                   </li>
+                   <li class="navTop"><a href="">用户管理</a>
+                    <ul>
+                                <li><a href="/useradd">添加用户</a></li>
+                                <li><a href="/userdel">删除用户</a></li>
+                                <li><a href="/modifypass">修改密码</a></li>
+            </ul>
+           </li>
+                </ul>
+        </div>
+        <div class="main">
+        {% block content %}
+        {% endblock %}
+        </div>
+            
+        <div class="foot">
+		Copyright@柳双
+        </div>
+</body>
+</html>

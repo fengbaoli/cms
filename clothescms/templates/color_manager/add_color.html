@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<link type="text/css" href="/css/addcolor.css" rel="stylesheet" />
+    <div>
+	<h2>商品录入</h2>
+	</div>
+
+    <div class="addcolor">
+       <form method="post" action="/addcolor_result/" id="addbrand">
+        <div class="colorinput">
+          <label>颜色编号</label>
+          <input  type="text" name="color_no" required="required" />
+          <br />
+           <label>颜色名称</label>
+          <input  type="text" name="color_name" required="required" />
+          <br />
+          <input type="submit" value="添加" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+          <input type="reset"  value="重置" />
+        </div>
+      </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,50 @@
+<html>
+ <head></head> 
+ <body>
+   {% extends 'base.html' %} {% block content %} 
+  <link type="text/css" href="/css/addgoods.css" rel="stylesheet" /> 
+  <div> 
+   <h2>商品录入</h2> 
+  </div> 
+  <div class="addgoods"> 
+   <form method="post" action="/addgoods_result/" id="addgoods" enctype="multipart/form-data" >
+       <label>商品编码</label>
+    <input type="text" name="goods_no" required="required" />
+    <label>类别</label> 
+    <select name="goods_type"> {% for goods_type in goods_type %} <option>{{goods_type }}</option> {% endfor %} </select>
+    <a href="/add_category">+</a>
+    <label>商品名称</label> 
+    <input type="text" name="goods_name" required="required" /> 
+    <label>供应商</label> 
+    <select name="goods_customer"> {% for goods_customer in goods_customer %} <option>{{goods_customer }}</option> {% endfor %} </select> 
+    <label>吊牌价</label> 
+    <input type="text" name="goods_price" required="required" /> 
+    <label>折扣</label> 
+    <input type="text" name="goods_discount" required="required" /> 
+    <label>品牌</label> 
+    <select name="goods_brand"> {% for goods_brand in goods_brand %} <option>{{goods_brand }}</option> {% endfor %} </select> 
+    <label>季节</label> 
+    <select name="goods_seasonal"> {% for goods_seasonal in goods_seasonal %} <option>{{goods_seasonal }}</option> {% endfor %} </select> 
+    <label>数量</label> 
+    <input type="text" name="goods_quantity" required="required" /> 
+    <select name="goods_unit"> {% for goods_unit in goods_unit %} <option>{{goods_unit }}</option> {% endfor %} </select>
+    <br /> 
+    <label>图片</label> 
+    <input type="file" name="goods_images" required="required" /> 
+    <label>颜色</label> 
+    <select name="goods_color"> {% for goods_color in goods_color %} <option>{{goods_color }}</option> {% endfor %} </select> 
+    <label>尺码</label> 
+    <select name="goods_size"> {% for goods_size in goods_size %} <option>{{goods_size }}</option> {% endfor %} </select>
+    <label>采购日期</label> 
+    <input type="date" name="purchase_date" required="required" /> 
+    <label>调换到期</label> 
+    <input type="date" name="exchange_date" required="required" /> 
+    <label>销售状态</label> 
+    <select name="sale_status"> <option value="库房">库房</option> <option value="售卖">售卖</option> <option value="已售">已售</option> </select>
+    <br/>
+    <input type="submit" value="添加" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <input type="reset" value="重置" /> 
+   </form> 
+  </div> {% endblock %}  
+ </body>
+</html>

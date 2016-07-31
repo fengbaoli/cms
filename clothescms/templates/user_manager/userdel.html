@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<link type="text/css" href="/css/user.css" rel="stylesheet" />
+        <div>
+        <h2>用户删除</h2>
+        </div>
+
+   
+    <div class="userdel">
+    <form method="post" action="/user_del_result/">
+
+     <div >
+     <label>输入删除用户名</label>
+    <input  type="text" name="delusername" required="required" />
+         <br />
+    &nbsp;&nbsp;&nbsp;<button type="submit">确定</button> &nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" />
+    </div>
+
+    </form>
+     </div>
+
+{% endblock %}

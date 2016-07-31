@@ -1,0 +1,103 @@
+.addunit{
+        font-size:14px;
+        font-family:ËÎÌו;
+        color:black;
+        border:0 solid #151571;
+        height:650px;
+        margin:5px;
+        padding:2px;
+        text-align:center;
+
+}
+h2{
+   text-align:center;
+
+
+  }
+
+
+.addunit input:link,.addunit input:visited,.addunit label:link,.addunit label:visited{
+        color:#B03060;
+}
+
+
+.addunit textarea:link,.addunit textarea:visited,.addunit label:link,.addunit label:visited{
+        color:#B03060;
+}
+
+
+.addunit input:hover ,.addunit label:hover,.addunit textarea{
+        color:#8B2323;
+        border-left:2px solid yellow;
+        font-weight:bold;
+        padding:2px;
+}
+
+.addunit input,.addunit textarea{
+    background-color:#C6E2FF;
+
+}
+
+textarea{
+    width:173px;
+
+}
+
+.userdel{
+        font-size:14px;
+        font-family:ËÎÌו;
+        color:black;
+        border:0 solid #151571;
+        height:650px;
+        margin:5px;
+        padding:2px;
+        text-align:center;
+
+}
+
+.userdel input:link,.useradd input:visited,.useradd label:link,.useradd label:visited{
+        color:#B03060;
+}
+
+.userdel input:hover ,.useradd label:hover{
+        color:#8B2323;
+        border-left:2px solid yellow;
+        font-weight:bold;
+        padding:2px;
+}
+
+.userdel input{
+    background-color:#C6E2FF;
+
+}
+
+
+
+
+.usermod{
+        font-size:14px;
+        font-family:ËÎÌו;
+        color:black;
+        border:0 solid #151571;
+        height:650px;
+        margin:5px;
+        padding:2px;
+        text-align:center;
+
+}
+
+.usermod input:link,.useradd input:visited,.useradd label:link,.useradd label:visited{
+        color:#B03060;
+}
+
+.usermod input:hover ,.useradd label:hover{
+        color:#8B2323;
+        border-left:2px solid yellow;
+        font-weight:bold;
+        padding:2px;
+}
+
+.usermod input{
+    background-color:#C6E2FF;
+
+}

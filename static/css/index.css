@@ -1,0 +1,114 @@
+body{
+   background-color:#C6E2FF;  
+}
+
+
+#logo{
+	position:absolute;
+	left:20px;
+	top:5px;
+}
+
+
+#logout{
+        position:absolute;
+        right:20px;
+        top:30px;
+        font-size:14px;
+        font-family:宋体;
+        text-decoration:none;
+}
+
+
+#logout a:link,#logout a:visited{
+        color:red;
+}
+
+
+.nav {
+
+        font-size:14px;
+        font-family:宋体;
+        margin:0 ;
+        padding:0;
+
+        }
+.nav li.navTop {
+    float: left;
+        list-style-type:none;
+}
+
+.nav li.navTop a {
+        height:15px;
+        display:block;
+    padding:5px 5px 5px 1px;
+        text-decoration:none;
+        width:90px;
+        border-left:10px solid #151571;
+        border-right:5px solid #151571;
+        border-bottom:5px solid  yellow;
+        text-align:center;
+}
+
+.nav a:link,li a:visited{
+        background-color:#9AFF9A;
+        color:#B03060;
+}
+
+.nav li.navTop a:hover {
+        background-color:#7EC0EE;
+        color:#8B2323;
+        border-left:12px solid yellow;
+        font-weight:bold;  
+        padding:10px;
+}
+
+.nav li.navTop ul {
+    display: none;
+        position:absolute;  
+        margin:0;
+        padding:0;
+}
+
+.nav li.navTop:hover ul {
+    display: block;
+        list-style-type:none; 
+}
+
+.nav li.navTop ul li a {
+        margin:0;
+    line-height: 10px;
+    text-align: center;
+    overflow: auto; 
+
+}
+.nav li.navTop ul li a:hover {
+    color: blue;
+}
+
+/*  菜单居中 */
+.nav {
+    display:table;
+    margin:0 auto;
+}
+
+.main{
+    height:650px;
+    width:100%;
+	margin-top:20px;
+    border-top:2px solid #8E8E8E;
+    border-left:2px solid #8E8E8E;
+    border-right:2px solid #8E8E8E;
+
+    }
+
+.foot{
+     height:50px;
+     width:100%;
+     border-bottom:2px solid #8E8E8E;
+     border-left:2px solid #8E8E8E;
+     border-right:2px solid #8E8E8E;
+     text-align:center;
+     padding-top:25px;
+     font-weight:bold;
+    }

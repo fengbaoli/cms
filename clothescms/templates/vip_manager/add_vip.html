@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<link type="text/css" href="/css/addvip.css" rel="stylesheet" />
+    <div>
+	<h2>单位添加</h2>
+	</div>
+
+    <div class="addvip">
+       <form method="post" action="/addvip_result/" id="addvip">
+        <div class="vipinput">
+          <label>VIP编号</label>
+          <input  type="text" name="vip_no" required="required" />
+          <br />
+           <label>VIP类别名称</label>
+          <input  type="text" name="vip_type_name" required="required" />
+          <br />
+            <label>默认折扣</label>
+          <input  type="text" name="vip_default_discount" required="required" />
+          <br />
+          <input type="submit" value="添加" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+          <input type="reset"  value="重置" />
+        </div>
+      </form>
+    </div>
+{% endblock %}

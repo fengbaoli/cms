@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<link type="text/css" href="/css/addsize.css" rel="stylesheet" />
+    <div>
+	<h2>尺寸添加</h2>
+	</div>
+
+    <div class="addsize">
+       <form method="post" action="/addsize_result/" id="addbrand">
+        <div class="sizeinput">
+          <label>尺寸编号</label>
+          <input  type="text" name="size_no" required="required" />
+          <br />
+           <label>尺寸名称</label>
+          <input  type="text" name="size_name" required="required" />
+          <br />
+          <input type="submit" value="添加" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+          <input type="reset"  value="重置" />
+        </div>
+      </form>
+    </div>
+{% endblock %}

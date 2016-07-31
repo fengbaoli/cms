@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if message %}
+<script type="application/javascript">
+alert("{{message}}")
+</script>
+{% endif %}
+<link type="text/css" href="/css/seasonal_management.css" rel="stylesheet" />
+        <div id="tablewrapper">
+                <div id="tableheader">
+                <div class="search">
+                <select id="columns" onchange="sorter.search('query')"></select>
+                <input type="text" id="query" onkeyup="sorter.search('query')" />
+            </div>
+            <span class="details">
+                                <div>记录数 <span id="startrecord"></span>-<span id="endrecord"></span> of <span id="totalrecords"></span></div>
+                        <div><a href="javascript:sorter.reset()">重置</a></div>
+                </span>
+        </div>
+        <table cellpadding="0" cellspacing="0" border="0" id="table" class="tinytable">
+            <thead>
+                     <tr> 
+                    <th class="nosort"><h3>季节</h3></th>
+                    <th><h3>年份</h3></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if seasonals %}
+                          {% for seasonal,years in seasonals %}
+                                         <tr>  
+                                               <td>{{seasonal}}</td>
+                                               <td>{{years}}</td>
+                                        </tr>
+                           {% endfor %}
+            {% else %}  
+                                        <tr> 
+                                               <td>{{seasonal}}</td>
+                                               <td>{{years}}</td>
+                                        </tr>
+            {% endif %}
+            </tbody>
+        </table>
+       
+                <div  class="add_seasonal">
+                      <ul>
+                       <li><a href="/add_seasonal">添加</a></li>
+                       <li><a href="/mod_seasonal">修改</a></li
+                      </ul>
+                </div>
+
+        <div id="tablefooter">
+          <div id="tablenav">
+                <div>
+                    <img src="/images/first.gif" width="16" height="16" alt="First Page" onclick="sorter.move(-1,true)" />
+                    <img src="/images/previous.gif" width="16" height="16" alt="First Page" onclick="sorter.move(-1)" />
+                    <img src="/images/next.gif" width="16" height="16" alt="First Page" onclick="sorter.move(1)" />
+                    <img src="/images/last.gif" width="16" height="16" alt="Last Page" onclick="sorter.move(1,true)" />
+                </div>
+                <div>
+                        <select id="pagedropdown"></select>
+                                </div>
+                <div>
+                        <a href="javascript:sorter.showall()">查看全部</a>
+                </div>
+            </div>
+                        <div id="tablelocation">
+                <div>
+                    <select onchange="sorter.size(this.value)">
+                    <option value="5">5</option>
+                        <option value="10" selected="selected">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                    <span>每页显示条目</span>
+                </div>
+                <div class="page">Page <span id="currentpage"></span> of <span id="totalpages"></span></div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="/js/select.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/save.js" charset="urf-8"></script>
+<script type="text/javascript" src="/js/controls_views.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/customer_del.js" charset="utf-8"></script>
+{% endblock %}

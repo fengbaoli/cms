@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<link type="text/css" href="/css/addcategory.css" rel="stylesheet" />
+    <div>
+	<h2>类别添加</h2>
+	</div>
+
+    <div class="addcategory">
+       <form method="post" action="/addcategory_result/" id="addcategory">
+        <div class="categoryinput">
+          <label>类别编号</label>
+          <input  type="text" name="category_no" required="required" />
+          <br />
+           <label>类别名称</label>
+          <input  type="text" name="category_name" required="required" />
+          <br />
+          <input type="submit" value="添加" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+          <input type="reset"  value="重置" />
+        </div>
+      </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>  
+    <html>  
+    <head>  
+    <meta charset="UTF-8">  
+    <meta http-equiv="refresh" content="5">
+    <title>流量统计图</title>  
+    <script type="text/javascript" src="/js/jquery.min.js"></script>  
+    <script type="text/javascript" src="/js/highcharts.js"></script>  
+     <script type="text/javascript" src="/js/exporting.js"></script> 
+    <script type="text/javascript" src="/js/gray.js"></script> 
+    <script type="text/javascript">  
+         $(function(){  
+             $('#lineChart').highcharts({  
+                 chart: {  
+                     type: 'line'  
+                 },  
+                 title: {  
+                     text: '流量'  
+                 },  
+                 subtitle: {  
+                     text: '日流量'  
+                 },  
+                 xAxis: {  
+                     categories: [ 
+                                    {% for  time in    col_tile %}
+                                         '{{time}}',
+                                         {% endfor %}
+                 ],
+					  
+                  },
+yAxis: {  
+                     min: 0,  
+                     title: {  
+                         text: '流量(b)'  
+                      }
+                 },  
+                 tooltip: {  
+                     headerFormat: '<span style="font-size:20px">{point.key}</span><table>',  
+                     pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +  
+                         '<td style="padding:0"><b>{point.y:.1f} 元</b></td></tr>',  
+                     footerFormat: '</table>',  
+                     shared: true,  
+                     useHTML: true  
+                 },  
+                 plotOptions: {  
+                     column: {  
+                         pointPadding: 0.2,  
+                         borderWidth: 0  
+                     }  
+                 },  
+                 series: [{  
+                  
+                     name: '流出量',  
+                     data:[
+                             {% for send in Net_sent %}
+                               {{send}},
+                             {% endfor %}
+                          ]
+                 },{
+
+                     name: '流入量',
+                     data:[
+                             {% for rece in Net_recv %}
+                               {{rece}},
+                             {% endfor %}
+                          ]
+                 },{
+
+                     name: '流入包',
+                     data:[
+                             {% for recepg in Net_rpkg %}
+                               {{recepg}},
+                             {% endfor %}
+                          ]
+                 },{
+
+                     name: '流出包',
+                     data:[
+                             {% for sendpg in Net_spkg %}
+                               {{sendpg}},
+                             {% endfor %}
+                          ]
+                 }]  
+             });  
+         });  
+</script>  
+    </head>  
+    <body>  
+       <div id="lineChart" style="width: 1200px; height: 500px; margin: 0 auto"></div>  
+    </body>  
+    </html> 
